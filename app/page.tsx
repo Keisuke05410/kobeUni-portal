@@ -3,6 +3,7 @@ import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
 import { FaBook, FaMapMarkedAlt } from "react-icons/fa";
 import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
+import Link from "next/link";
 
 // サービス追加する時はここに追加
 const serviceBlockPropsList: ServiceBlockProps[] = [
@@ -57,6 +58,10 @@ export default function Home() {
                 <div className="text-sm md:text-xl">
                     神大生に最高の学生生活を届ける。
                 </div>
+            </div>
+            <div className="text-sm md:text-xl">
+                <Link href="/news" className="text-bluenormal font-bold">サービスに関して重要なお知らせ</Link>があります。<br/>
+                ご確認ください。
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                 {serviceBlockPropsList.map((props, index) => {

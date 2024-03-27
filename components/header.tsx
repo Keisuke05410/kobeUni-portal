@@ -9,6 +9,7 @@ import Link from "next/link";
 import { IoIosMenu } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import { HiOutlineNewspaper } from "react-icons/hi2";
 
 const InstallButton = () => {
     const [isInstalled, setIsInstalled] = useState<boolean>(false);
@@ -126,6 +127,10 @@ const Menu = () => {
                             <Link onClick={handleMenuClose} href="/">ホーム</Link>
                         </li>
                         <li className="flex items-center hover:text-bluenormal">
+                            <HiOutlineNewspaper />
+                            <Link onClick={handleMenuClose} href="/news">お知らせ</Link>
+                        </li>
+                        <li className="flex items-center hover:text-bluenormal">
                             <IoDocumentTextOutline />
                             <Link onClick={handleMenuClose} href="/recruit">採用情報</Link>
                         </li>
@@ -169,6 +174,12 @@ export default function Header() {
                         <Link href="/" className="flex items-center">
                             <IoHome />
                             ホーム
+                        </Link>
+                    </li>
+                    <li className="hover:text-bluenormal">
+                        <Link href="/news" className="flex items-center">
+                            <HiOutlineNewspaper />
+                            お知らせ
                         </Link>
                     </li>
                     <li className="hover:text-bluenormal">
